@@ -1,105 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:orientation="vertical">
+
     <TextView
         android:id="@+id/loginscrn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="80dp"
         android:text="Registration"
         android:textColor="#001a33"
         android:textSize="25dp"
-        android:textStyle="bold"
-        android:layout_gravity="center"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/txtUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
-        android:textColor="#001a33"
         android:layout_marginTop="20dp"
-        android:text="Username"/>
+        android:text="Username"
+        android:textColor="#001a33" />
+
     <EditText
         android:id="@+id/editUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#003366"
         android:layout_marginLeft="100dp"
-        android:ems="10"/>
+        android:backgroundTint="#003366"
+        android:digits="abcdefghijklmnopqrstuvwxyz1234567890 "
+        android:ems="10" />
+
     <TextView
         android:id="@+id/txtID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
-        android:textColor="#001a33"
-        android:text="ID"/>
+        android:text="ID"
+        android:textColor="#001a33" />
+
     <EditText
         android:id="@+id/editID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#003366"
-        android:layout_marginLeft="100dp"
-        android:ems="10"/>
-    <TextView
-        android:id="@+id/secTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#001a33"
-        android:text="Email"
-        android:layout_marginLeft="100dp" />
-    <EditText
-        android:id="@+id/txtEmail"
-        android:inputType="textEmailAddress"
+        android:inputType="number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
         android:backgroundTint="#003366"
         android:ems="10" />
+
+    <TextView
+        android:id="@+id/secTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:text="Email"
+        android:textColor="#001a33" />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:backgroundTint="#003366"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
     <TextView
         android:id="@+id/thirdTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
         android:text="Password"
-        android:textColor="#001a33"
-        android:layout_marginLeft="100dp" />
+        android:textColor="#001a33" />
+
     <EditText
         android:id="@+id/txtPwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
-        android:inputType="textPassword"
         android:backgroundTint="#003366"
-        android:ems="10" />
+        android:ems="10"
+        android:inputType="textPassword" />
 
     <TextView
         android:id="@+id/txtJenisKelamin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#001a33"
-        android:text="Jenis Kelamin"
         android:layout_marginLeft="100dp"
-        />
+        android:text="Jenis Kelamin"
+        android:textColor="#001a33" />
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginEnd="55dp">
+
         <RadioButton
             android:id="@+id/rbJenisKelaminP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#003366"
-            android:text="Perempuan" />
+            android:text="Perempuan"
+            android:textColor="#003366" />
+
         <RadioButton
             android:id="@+id/rbJenisKelaminL"
             android:layout_width="match_parent"
-            android:textColor="#003366"
             android:layout_height="wrap_content"
-            android:text="Laki - Laki" />
+            android:text="Laki - Laki"
+            android:textColor="#003366" />
     </RadioGroup>
 
     <Button
@@ -109,15 +120,17 @@
         android:layout_marginLeft="100dp"
         android:backgroundTint="#001a33"
         android:text="Create" />
-    <TextView android:id="@+id/lnkLogin"
+
+    <TextView
+        android:id="@+id/lnkLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Login"
         android:gravity="center"
-        android:textSize="20dp"
+        android:onClick="test"
+        android:text="Login"
         android:textColor="#004f99"
-        android:onClick="test"/>
+        android:textSize="20dp" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress2"
