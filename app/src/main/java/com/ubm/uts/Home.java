@@ -50,12 +50,12 @@ public class Home extends AppCompatActivity {
         });
 
         ButtonReport.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), profil.class);
+            Intent intent = new Intent(getApplicationContext(), Report.class);
             startActivity(intent);
         });
 
         ButtonProfil.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), Report.class);
+            Intent intent = new Intent(getApplicationContext(),profil.class);
             startActivity(intent);
         });
     }

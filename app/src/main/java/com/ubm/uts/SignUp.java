@@ -45,7 +45,7 @@ public class SignUp extends AppCompatActivity {
             String pass = password.getText().toString();
             String id = identification.getText().toString();
             String repasswd = repass.getText().toString();
-            ButtonLogin = findViewById(R.id.btnLogin);
+
             int radioId = rgjenisk.getCheckedRadioButtonId();
             rbjenisk = findViewById(radioId);
             jeniskelamin = rbjenisk.getText().toString();
@@ -70,7 +70,7 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
-
+        ButtonLogin = findViewById(R.id.btnLogin);
         ButtonLogin.setOnClickListener(view -> {
             Intent Login = new Intent(SignUp.this, Login.class);
             startActivity(Login);
