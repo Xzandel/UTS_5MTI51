@@ -54,7 +54,7 @@ public class SqliteHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("  DROP TABLE IF EXiSTS " + TABLE_USERS);
     }
 
-    public Boolean insertData(String username, String password, String id, String jeniskelamin, String email){
+    public Boolean insertData(String username, String password, String id, String jeniskelamin, String email) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         //Insert values
@@ -64,8 +64,8 @@ public class SqliteHelper extends SQLiteOpenHelper {
         contentValues.put("jeniskelamin", jeniskelamin);
         contentValues.put("username", username);
 
-        long result = db.insert("users",null,contentValues);
-        if(result==-1) return false;
+        long result = db.insert("users", null, contentValues);
+        if (result == -1) return false;
         else
             return true;
     }
@@ -79,10 +79,10 @@ public class SqliteHelper extends SQLiteOpenHelper {
             return false;
     }
 
-    public boolean checkidpassword(String id, String password){
+    public boolean checkidpassword(String id, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("Select * from users where id =? and password =?", new String[]{id,password});
-        if(cursor.getCount()>0)
+        Cursor cursor = db.rawQuery("Select * from users where id =? and password =?", new String[]{id, password});
+        if (cursor.getCount() > 0)
             return true;
         else
             return false;

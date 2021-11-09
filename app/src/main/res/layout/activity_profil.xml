@@ -27,8 +27,8 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="20dp"
         android:textColor="@color/white"
-        android:textSize="35dp"
-        android:text="Xavi"/>
+        android:textSize="20dp"
+        android:text="username : Xavi"/>
     <TextView
         android:id="@+id/tvID"
         android:layout_width="wrap_content"
@@ -36,8 +36,8 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="20dp"
         android:textColor="@color/white"
-        android:textSize="35dp"
-        android:text="054**"/>
+        android:textSize="20dp"
+        android:text="ID : 054**"/>
     <TextView
         android:id="@+id/tvEmail"
         android:layout_width="wrap_content"
@@ -45,8 +45,8 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="20dp"
         android:textColor="@color/white"
-        android:textSize="35dp"
-        android:text="xaviba@mail.com"/>
+        android:textSize="20dp"
+        android:text="email : xaviba@mail.com"/>
     <TextView
         android:id="@+id/tvJenisKelamin"
         android:layout_width="wrap_content"
@@ -54,7 +54,8 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="20dp"
         android:textColor="@color/white"
-        android:textSize="35dp"
-        android:text="Male"/>
+        android:textSize="20dp"
+        android:ems="10"
+        android:text="Jenis Kelamin : Perempuan"/>
 
 </LinearLayout>

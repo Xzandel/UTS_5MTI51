@@ -43,12 +43,12 @@
 
         <Button
             android:id="@+id/btnReport"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:backgroundTint="@color/black_shade_1"
-            app:icon="@drawable/warning"
-            style="?android:attr/borderlessButtonStyle"/>
+            app:icon="@drawable/warning" />
 
 
     </androidx.appcompat.widget.Toolbar>
