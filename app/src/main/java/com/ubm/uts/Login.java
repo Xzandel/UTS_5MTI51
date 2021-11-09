@@ -14,23 +14,25 @@ public class Login extends AppCompatActivity {
     Button ButtonSignUp, ButtonLogin;
     SqliteHelper DB;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Find component
         identification = findViewById(R.id.editID);
         password = findViewById(R.id.editPwd);
         ButtonSignUp =  findViewById(R.id.btnSignup);
         ButtonLogin = findViewById(R.id.btnLogin);
         DB = new SqliteHelper(this);
 
+
         ButtonLogin.setOnClickListener(view -> {
+            //Get values from input
             String id = identification.getText().toString();
             String pass = password.getText().toString();
-    
 
+            //Validation
             if(id.equals("")||pass.equals(""))
                 Toast.makeText(Login.this, "Please enter all the fields", Toast.LENGTH_SHORT).show();
             else{
@@ -46,6 +48,7 @@ public class Login extends AppCompatActivity {
 
             }
         });
+        //Logic to go to other activities with data
         ButtonSignUp.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(), SignUp.class);
             startActivity(intent);

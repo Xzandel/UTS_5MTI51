@@ -15,6 +15,7 @@ public class newsRVAdapter extends RecyclerView.Adapter<newsRVAdapter.MyViewHold
 
     int[]arr;
     String[]arr1,arr2;
+    //Get Method
     public newsRVAdapter(int[] arr, String[] arr1, String[] arr2) {
         this.arr = arr;
         this.arr1 = arr1;
@@ -22,6 +23,7 @@ public class newsRVAdapter extends RecyclerView.Adapter<newsRVAdapter.MyViewHold
     }
     @NonNull
     @Override
+    //Initialize ViewHolder
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.news_rv_item,parent,false);
         MyViewHolder MyViewHolder = new MyViewHolder(view);
@@ -29,6 +31,7 @@ public class newsRVAdapter extends RecyclerView.Adapter<newsRVAdapter.MyViewHold
     }
 
     @Override
+    //Input data to ViewHolder
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.nameImageView.setImageResource(arr[position]);
         holder.nameTextView.setText(arr1[position]);
@@ -36,14 +39,17 @@ public class newsRVAdapter extends RecyclerView.Adapter<newsRVAdapter.MyViewHold
     }
 
     @Override
+    //Item Counts
     public int getItemCount() {
         return arr.length;
     }
 
+    //Create ViewHolder
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView nameTextView;
         public TextView nameTextView2;
         public ImageView nameImageView;
+        //Search for specific elements in View
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             nameTextView = (TextView) itemView.findViewById(R.id.tvNews);

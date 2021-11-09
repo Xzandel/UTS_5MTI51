@@ -54,69 +54,10 @@ public class SqliteHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("  DROP TABLE IF EXiSTS " + TABLE_USERS);
     }
 
-//    public void addUser(User user) {
-//        //get writable database
-//        SQLiteDatabase db = this.getWritableDatabase();
-//
-//        //create content values to insert
-//        ContentValues values = new ContentValues();
-//
-//        //Put id in @values
-//        values.put(KEY_ID, user.id);
-//
-//        //Put username in @values
-//        values.put(KEY_USER_NAME, user.userName);
-//
-//        //Put email in @values
-//        values.put(KEY_EMAIL, user.email);
-//
-//        //Put password in @values
-//        values.put(KEY_PASSWORD, user.password);
-//
-//        //Put jenis kelamin in @values
-//        values.put(KEY_JENIS_KELAMIN, user.jenisKelamin);
-//
-//        db.insert(TABLE_USERS, null, values);
-//    }
-
-//    public User Authenticate(User user) {
-//        SQLiteDatabase db = this.getReadableDatabase();
-//        @SuppressLint("Recycle") Cursor cursor = db.query(TABLE_USERS,//selecting Table
-//                new String[]{KEY_ID, KEY_USER_NAME, KEY_EMAIL, KEY_PASSWORD},//selecting column want to query
-//                KEY_USER_NAME + "=?",
-//                new String[]{user.userName},//Where clause
-//                null, null, null);
-//
-//        if (cursor != null && cursor.moveToFirst() && cursor.getCount() > 0) {
-//            //if cursor has value then in user database there is user associated with  this given  username
-//            User user1 = new User(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4));
-//
-//            //Match both password check they are same or not
-//            if (user.password.equalsIgnoreCase(user1.password)) {
-//                return user1;
-//            }
-//        }
-//
-//        //if user  password does not matches on there is no  record  with that username then return @false
-//        return null;
-//
-//    }
-
-//    public boolean isEmailExist(String email) {
-//        SQLiteDatabase db = this.getReadableDatabase();
-//        @SuppressLint("Recycle") Cursor cursor = db.query(TABLE_USERS,//Selecting Table
-//                new String[]{KEY_ID, KEY_USER_NAME, KEY_EMAIL, KEY_PASSWORD, KEY_JENIS_KELAMIN},//Selecting column want to query
-//                KEY_EMAIL + "=?",
-//                new String[]{email},//Where clause
-//                null, null, null);
-//
-//        //if cursor has value then in user database there is user associated with this given email so return true
-//        return cursor != null && cursor.moveToFirst() && cursor.getCount() > 0;
-//    }
     public Boolean insertData(String username, String password, String id, String jeniskelamin, String email){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-
+        //Insert values
         contentValues.put("id", id);
         contentValues.put("password", password);
         contentValues.put("email", email);

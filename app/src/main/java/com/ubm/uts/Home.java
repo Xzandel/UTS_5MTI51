@@ -14,6 +14,7 @@ public class Home extends AppCompatActivity {
     newsRVAdapter recyclerViewAdapterNews;
     Button ButtonTitle, ButtonReport, ButtonProfil;
 
+    //Manually create raw data for database
     int[] arrfoto1 = {R.drawable.cat1, R.drawable.cat2, R.drawable.cat3};
     int[] arrfoto2 = {R.drawable.barcelona1, R.drawable.barcelona2, R.drawable.barcelona3};
     String[] arrstr = {"Liga Spanyol", "Liga Inggris", "Liga Internasional"};
@@ -23,23 +24,26 @@ public class Home extends AppCompatActivity {
     };
     String[] arrstr3 = {"Barcelona", "Chelsea", "PSG"};
 
-    //019c35fbef4040b28aff747fbde0f6c1
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        //Set Recycler Views to a template and import data to it
         recyclerView = findViewById(R.id.rvCategories);
         recyclerViewAdapter = new catRVAdapter(arrfoto1, arrstr3);
         recyclerView.setAdapter(recyclerViewAdapter);
-
         recyclerViewNews = findViewById(R.id.rvNews);
         recyclerViewAdapterNews = new newsRVAdapter(arrfoto2, arrstr, arrstr2);
         recyclerViewNews.setAdapter(recyclerViewAdapterNews);
+
+        //Find component
         ButtonTitle = findViewById(R.id.btnTitle);
         ButtonReport = findViewById(R.id.btnReport);
         ButtonProfil = findViewById(R.id.btnProfile);
 
+        //Logic to go to other activities with data
         ButtonTitle.setOnClickListener(view -> {
             Intent intent = new Intent(getApplicationContext(), AboutUs.class);
             startActivity(intent);

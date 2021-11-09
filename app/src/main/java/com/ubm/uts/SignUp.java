@@ -27,7 +27,7 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-
+        //Find component
         username = findViewById(R.id.editUsername);
         identification = findViewById(R.id.editID);
         email = findViewById(R.id.editEmail);
@@ -35,23 +35,22 @@ public class SignUp extends AppCompatActivity {
         repass = findViewById(R.id.editRePwd);
         rgjenisk = findViewById(R.id.rgJenisKelamin);
         DB = new SqliteHelper(this);
-
         ButtonCreate = findViewById(R.id.btnCreate);
+
         ButtonCreate.setOnClickListener(view -> {
 
-            //Take Edit Texts Values
+            //Get Values from input
             String usern = username.getText().toString();
             String e_mail = email.getText().toString();
             String pass = password.getText().toString();
             String id = identification.getText().toString();
             String repasswd = repass.getText().toString();
-
-            //Take Radio Button
+            ButtonLogin = findViewById(R.id.btnLogin);
             int radioId = rgjenisk.getCheckedRadioButtonId();
             rbjenisk = findViewById(radioId);
             jeniskelamin = rbjenisk.getText().toString();
 
-
+            //Validation
             if(usern.equals("")||pass.equals("")||e_mail.equals("")||repasswd.equals("")||id.equals(""))
                 Toast.makeText(SignUp.this, "Please enter all the fields", Toast.LENGTH_SHORT).show();
             else{
@@ -63,7 +62,6 @@ public class SignUp extends AppCompatActivity {
                             Intent intent = new Intent(getApplicationContext(), Login.class);
                             startActivity(intent);
                         }
-
                     }
                     else{
                         Toast.makeText(SignUp.this, "User already exists!", Toast.LENGTH_SHORT).show();
@@ -72,7 +70,7 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
-        ButtonLogin = findViewById(R.id.btnLogin);
+
         ButtonLogin.setOnClickListener(view -> {
             Intent Login = new Intent(SignUp.this, Login.class);
             startActivity(Login);
