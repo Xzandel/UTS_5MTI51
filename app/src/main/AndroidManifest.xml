@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ubm.uts">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.UTS">
+        <activity
+            android:name=".Report"
+            android:exported="true" />
+        <activity
+            android:name=".profil"
+            android:exported="true" />
+        <activity
+            android:name=".AboutUs"
+            android:exported="true" />
         <activity
             android:name=".Home"
             android:exported="true" />

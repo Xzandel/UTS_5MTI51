@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_shade_1"
+    tools:context=".AboutUs">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black_shade_1"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="VivaLaFC"
+        android:textAlignment="center"
+        android:textColor="@color/yellow"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_weight="1"
+        android:ems="10"
+        android:text="VivalaFC merupakan portal berita yang terdaftar dan sudah diverifikasi di Dewan Pers Indonesia. Informasi terbaru dan akurat yang disajikan seputar bola menitikberatkan pada akurasi dan ketajaman berita dengan sumber informasi yang terpercaya.
+
+VivaLaFC tidak bekerja untuk kepentingan politik mana pun dan berdiri di atas dan untuk semua golongan, serta non-partisan.
+
+Redaksi VivaLaFc harus taat pada kode etik jurnalistik yang ditetapkan Dewan Pers. Jurnalis kami tidak boleh terlibat dalam politik praktis, menjadi pengurus atau tim sukses partai politik."
+        android:textAlignment="center" />
+
+
+</LinearLayout>

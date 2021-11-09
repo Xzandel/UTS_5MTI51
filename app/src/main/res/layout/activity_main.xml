@@ -2,9 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     >
     <TextView
-        android:id="@+id/loginscrn"
+        android:id="@+id/tvLoginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
@@ -14,7 +15,7 @@
         android:textStyle="bold"
         android:layout_gravity="center"/>
     <TextView
-        android:id="@+id/fstTxt"
+        android:id="@+id/tvID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
@@ -24,27 +25,31 @@
         android:text="ID"
         />
     <EditText
-        android:id="@+id/txtEmail"
+        android:id="@+id/editID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#003366"
         android:backgroundTint="#003366"
         android:layout_marginLeft="100dp"
-        android:ems="10"/>
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Input your id"/>
     <TextView
-        android:id="@+id/secTxt"
+        android:id="@+id/tvPassword"
         android:layout_width="wrap_content"
         android:textColor="#001a33"
         android:layout_height="wrap_content"
         android:text="Password"
         android:layout_marginLeft="100dp" />
     <EditText
-        android:id="@+id/txtPwd"
+        android:id="@+id/editPwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
+        android:textColor="#003366"
         android:backgroundTint="#003366"
         android:inputType="textPassword"
+        android:hint="*****"
         android:ems="10" />
     <Button
         android:id="@+id/btnLogin"
@@ -52,16 +57,20 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
         android:backgroundTint="#001a33"
+        android:textColor="@color/white"
         android:text="Login" />
-    <TextView
-        android:id="@+id/lnkRegister"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="95dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="100dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:textSize="10dp"
         android:text="Sign up"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:textColor="#004f99"/>
+        android:textColor="#003366"
+        android:backgroundTint="@color/white"
+        />
+
 </LinearLayout>
 
 <!--TODO : Delete this-->
